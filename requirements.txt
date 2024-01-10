@@ -1,0 +1,10 @@
+astroid==3.0.2
+dill==0.3.7
+isort==5.13.2
+mccabe==0.7.0
+platformdirs==4.1.0
+pylint==3.0.3
+PyQt5==5.15.10
+PyQt5-Qt5==5.15.2
+PyQt5-sip==12.13.0
+tomlkit==0.12.3
