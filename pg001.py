@@ -1,5 +1,4 @@
 import sys
-
 from PyQt5 import QtCore, QtWidgets
 
 app = QtWidgets.QApplication(sys.argv)

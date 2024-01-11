@@ -1,0 +1,105 @@
+[tool.poetry]
+name = "pg001"
+version = "0.1.0"
+description = "使用 PyQt5 發展 GUI App 模板"
+authors = ["居正中 <AlanJui.1960@gmail.com>"]
+readme = "README.md"
+
+[tool.pyright]
+pythonVersion = "3.12"
+venvPath = "."
+venv = ".venv"
+extraPaths = [".venv/lib/python3.12/site-packages"]
+exclude = [
+  "**/__pycache__",
+  "**/migrations/**",
+  "**/venv/**",
+  "**/.venv/**",
+  "**/node_modules/**",
+  "**/dist/**",
+  "**/build/**",
+  "**/docs/**",
+  "**/tests/**",
+  "**/test/**",
+  "**/tests.py",
+  "**/.*",
+]
+ignore = [
+  "**/__pycache__",
+  "**/migrations/**",
+  "**/venv/**",
+  "**/.venv/**",
+  "**/node_modules/**",
+  "**/dist/**",
+  "**/build/**",
+  "**/docs/**",
+  "**/tests/**",
+  "**/test/**",
+  "**/tests.py",
+]
+defineConstant = { DEBUG = true }
+
+reportUnknownParameterType = "none"
+# reportUnusedImport = false
+# reportUnusedFunction = false
+# reportUnusedVariable = false
+# reportUnusedImport = "none"
+# reportUnusedFunction = "none"
+# reportUnusedVariable = "none"
+# reportUnusedClass = "none"
+# reportMissingImports = "warning"
+# typeCheckingMode = "off"
+# useLibraryCodeForTypes = true
+# reportMissingTypeStubs = false
+# reportGeneralTypeIssues = "none"
+# reportOptionalMemberAccess = "none"
+# typeshedPaths = []
+
+[tool.pylint]
+output-format = "colorized"
+ignore = "migrations"
+
+[tool.pylint."MESSAGES CONTROL"]
+max-line-length = 120
+disable = """
+	raw-checker-failed,
+	bad-inline-option,
+	locally-disabled,
+	file-ignored,
+	suppressed-message,
+	useless-suppression,
+	deprecated-pragma,
+	use-symbolic-message-instead,
+	too-many-instance-attributes,
+	len-as-condition,
+	too-few-public-methods,
+	anomalous-backslash-in-string,
+	no-else-return,
+	simplifiable-if-statement,
+	too-many-arguments,
+	duplicate-code,
+	no-name-in-module,
+	no-member,
+	import-error,
+	missing-module-docstring,
+	missing-class-docstring,
+	missing-function-docstring,
+	missing-docstring,
+	invalid-name,
+	invalid-str-returned,
+	unused-import,
+	unused-variable,
+	consider-using-enumerate
+"""
+
+# [tool.mypy]
+# exclude = ['.venv', 'venv']
+# # ignore_missing_imports = true
+# plugins = [
+#   "mypy_django_plugin.main",
+# ]
+
+# [tool.pydocstyle]
+# ignore = ["D100", "D103", "D104"]
+# match-dir = "tests/*"
+
