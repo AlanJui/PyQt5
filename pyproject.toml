@@ -59,6 +59,9 @@ reportUnknownParameterType = "none"
 output-format = "colorized"
 ignore = "migrations"
 
+[tool.pylint.MAIN]
+extension-pkg-whitelist = "PyQt5"
+
 [tool.pylint."MESSAGES CONTROL"]
 max-line-length = 120
 disable = """
@@ -92,12 +95,20 @@ disable = """
 	consider-using-enumerate
 """
 
-# [tool.mypy]
-# exclude = ['.venv', 'venv']
-# # ignore_missing_imports = true
+[tool.mypy]
+exclude = ['.venv', 'venv']
+warn_return_any = true
+warn_unused_configs = true
+# ignore_missing_imports = true
 # plugins = [
 #   "mypy_django_plugin.main",
 # ]
+
+[[tool.mypy.overrides]]
+module = [
+    "PyQt5"
+]
+# ignore_missing_imports = true
 
 # [tool.pydocstyle]
 # ignore = ["D100", "D103", "D104"]
