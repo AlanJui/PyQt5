@@ -108,9 +108,9 @@ warn_unused_configs = true
 
 [[tool.mypy.overrides]]
 module = [
-    "PyQt5",
+  "PyQt5"
 ]
-# ignore_missing_imports = true
+ignore_missing_imports = true
 
 # [tool.pydocstyle]
 # ignore = ["D100", "D103", "D104"]
