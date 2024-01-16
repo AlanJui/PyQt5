@@ -60,7 +60,9 @@ output-format = "colorized"
 ignore = "migrations"
 
 [tool.pylint.MAIN]
-extension-pkg-whitelist = "PyQt5"
+extension-pkg-whitelist = [
+  "PyQt5",
+] 
 
 [tool.pylint."MESSAGES CONTROL"]
 max-line-length = 120
@@ -106,7 +108,7 @@ warn_unused_configs = true
 
 [[tool.mypy.overrides]]
 module = [
-    "PyQt5"
+    "PyQt5",
 ]
 # ignore_missing_imports = true
 
